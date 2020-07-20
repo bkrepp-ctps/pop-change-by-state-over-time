@@ -7,8 +7,8 @@ function app() {
 	$('#about_button').hide();
 	$('#about_button').click(function() { popup("about.html"); });
 	queue()
-		.defer(d3.json, "us_states_5m.geo.json")
-		.defer(d3.csv, "us_pop.csv")
+		.defer(d3.json, "json/us_states_5m.geo.json")
+		.defer(d3.csv, "csv/us_pop.csv")
 		.awaitAll(generateMap);	
 }
 
