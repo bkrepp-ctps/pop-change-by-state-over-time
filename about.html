@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About This Demo</title>
+
+<style type="text/css">
+
+
+#bigbox {
+    border: 3px ridge #b22400; 
+    padding: 25px;
+    margins: 1px;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #1d52c2;
+	width: 600px;
+	margin: 0 40px 0 0;	
+}
+h3 {
+    color: #b22400;
+    border-bottom: 1px solid #1d52c2;
+	overflow: hidden;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	color: #000000;
+}
+a {
+    text-decoration: none;
+}
+a.button {    
+    border: solid 1px #1d52c2;
+    background-color: #1d52c2;
+    padding: 2px 2px 2px 2px;
+    color: #fff;
+    
+}
+a.button:hover {
+    background-color: #fff;
+    color: #1d52c2;
+}
+
+</style>
+
+<script>
+function targetopener(mylink, closeme, closeonly) {
+	if (! (window.focus && window.opener))return true;
+	window.opener.focus();
+	if (! closeonly)window.opener.location.href=mylink.href;
+	if (closeme)window.close();
+	return false;
+}
+</script>
+</head>
+
+<body>
+
+<div id="bigbox">
+<div id="closeLink2">
+	<a href="http://www.ctps.org/map/www/d3_mapping_demos/change_over_time/index.html" class="button"
+	onclick="return targetopener(this,true,true)">Close this window</a>   
+</div>			<!--   END OF CLOSELINK  -->
+
+
+<h3>Introduction </h3>
+<p>
+This application demonstrates d3.js's ability to generate visualizations - in this case,
+a cartographic visualization - that display change over time.
+</p>
+<h3>Software Used</h3>
+The software used to build this demo includes:
+<ul>
+<li>d3.js - to generate the visualization</li>
+<li>colorbrewer.js - to to generate a colorblind-safe color palette</li>
+<li>queue.js - to manage asynchronous data requests from the web client</li>
+<li>and a little bit of jQuery to help manage the DOM</li>
+</ul>
+<h3>Data Sources</h3>
+<p>
+The data displayed by this demo come from:
+<ul>
+<li>United States Bureau of the Census </li>
+<li>Wikipedia</li>
+</ul>
+</p>
+<h3>Note</h3>
+<p>
+The observant user will note that some states were enumerated by the Census Bureau
+before they were admitted to the union. For example, Vermont was enumerated in 1790, 
+even though it was not admitted to the union until 1791.
+</p>
+<div id="closeLink">
+	<a href="http://www.ctps.org/map/www/d3_mapping_demos/change_over_time/index.html" class="button"
+	onclick="return targetopener(this,true,true)" >Close this window</a>   
+</div>			<!--   END OF CLOSELINK  -->
+
+</div>          <!--   END OF BIGBOX    -->
+
+
+
+</body>
+</html>
